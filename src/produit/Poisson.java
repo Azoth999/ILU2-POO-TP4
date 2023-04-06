@@ -2,12 +2,11 @@ package produit;
 
 public class Poisson extends Produit {
 	
-	private String nom;
-	private String unite;
+	private String nom = "poisson";
+	private String unite = "kg";
 	private String date;
 
-	public Poisson(String nom, String unite, String date) {
-		super(nom,unite);
+	public Poisson(String date) {
 		this.date = date;
 	}
 	

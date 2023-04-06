@@ -2,8 +2,8 @@ package produit;
 
 public interface IProduit {
 
-	String getNom();
+	public String getNom();
 
-	String description();
+	public String description();
 
 }

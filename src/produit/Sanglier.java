@@ -1,23 +1,25 @@
 package produit;
+
 import personnages.Gaulois;
 
 public class Sanglier extends Produit {
 
-	private String nom;
-	private String unite;
+	private String nom = "sanglier";
+	private String unite = "kg";
 	private int poids;
 	private Gaulois chasseur;
 
-	public Sanglier(String nom, String unite, int poids, Gaulois chasseur) {
-		super(nom,unite);
-		this.poids = poids;
+	public Sanglier(int poids, Gaulois chasseur) {
 		this.chasseur = chasseur;
+		this.poids = poids; 
 	}
 	
 	@Override
 	public String description() {
 		StringBuilder texte = new StringBuilder();
-		texte.append(this.nom + " de " + this.poids + " kg chassé par " + this.chasseur.getNom());
+		texte.append(this.nom + " de " + this.poids 
+				+ " " + unite + " chassé par " 
+				+ this.chasseur.getNom());
 		return texte.toString();
 	}
 }
