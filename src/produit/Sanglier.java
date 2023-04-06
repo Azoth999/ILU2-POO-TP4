@@ -5,7 +5,7 @@ import personnages.Gaulois;
 public class Sanglier extends Produit {
 
 	private String nom = "sanglier";
-	private int unite = 100;
+	private String unite = "kg";
 	private int poids;
 	private Gaulois chasseur;
 
@@ -25,7 +25,6 @@ public class Sanglier extends Produit {
 
 	@Override
 	public int calculerPrix(int prix) {
-		System.out.println(prix*this.poids/1000);
 		return prix*this.poids/1000;
 	}
 }

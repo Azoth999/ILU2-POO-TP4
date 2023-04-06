@@ -2,12 +2,9 @@ package scenarioTest;
 
 import produit.*;
 import personnages.Gaulois;
-import villagegaulois.Etal;
+import villagegaulois.*;
 
 public class ScenarioTest {
-	private void afficherMarche(Etal[] marche) {
-		StringBuilder texte = new StringBuilder();
-	}
 	
 	public static void main(String[] args) {
 				
@@ -28,16 +25,26 @@ public class ScenarioTest {
 		
 		Etal[] marche = new Etal[3];
 		Etal<Sanglier> etalSanglier = new Etal<Sanglier>();
+		Etal<Sanglier> etalSanglier2 = new Etal<Sanglier>();
 		Etal<Poisson> etalPoisson = new Etal<Poisson>();
 		marche[0] = etalSanglier;
-		marche[1]= etalSanglier;
+		marche[1]= etalSanglier2;
 		marche[2] = etalPoisson;
 		
 		marche[0].installerVendeur(obelix, sangliersObelix, 8);
 		marche[1].installerVendeur(asterix, sangliersAsterix, 10);
 		marche[2].installerVendeur(ordralfabetix, poissons, 7);
 		
+		System.out.println(marche[0].etatEtal());
+		System.out.println(marche[1].etatEtal());
+		System.out.println(marche[2].etatEtal());
+		
 		System.out.println(marche[0].acheterProduit(1));
+		System.out.println(marche[1].acheterProduit(2));
+		
+		System.out.println(marche[0].etatEtal());
+		System.out.println(marche[1].etatEtal());
+		System.out.println(marche[2].etatEtal());
 		
 	}
 	
