@@ -15,7 +15,9 @@ public class Scenario {
 		public <P extends Produit> boolean installerVendeur(Etal<P> etal, Gaulois vendeur, P[] produit, int prix) {
 			for (int i = 0; i < marche.length; i++) {
 				if (marche[i] == null) {
-					etal.installerVendeur(vendeur, produit, prix);
+					marche[i] = etal;
+					marche[i].installerVendeur(vendeur, produit, prix);
+					marche[i].etatEtal();
 					return true;
 				}
 			}
@@ -36,17 +38,6 @@ public class Scenario {
 				}
 			}
 			return depense;
-		}
-		
-		@Override
-		public String toString() {
-			StringBuilder texte = new StringBuilder();
-			for (int i = 0; i < marche.length; i++) {
-				if(marche[i]!=null) {
-					texte.append(marche[i].etatEtal());
-				}
-			}
-			return texte.toString();
 		}
 	};
 
