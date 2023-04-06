@@ -38,7 +38,7 @@ public class Etal<P extends Produit> implements IEtal {
 		}
 		return quantiteAVendre;
 	}
-
+	
 	public double acheterProduit(int quantiteSouhaitee) {
 		double prixPaye = 0;
 		for (int i = nbProduit - 1; i > nbProduit - quantiteSouhaitee - 1 || i > 1; i--) {
