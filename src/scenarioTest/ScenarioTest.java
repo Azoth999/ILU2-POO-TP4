@@ -6,7 +6,7 @@ import villagegaulois.Etal;
 
 public class ScenarioTest {
 	private void afficherMarche(Etal[] marche) {
-		
+		StringBuilder texte = new StringBuilder();
 	}
 	
 	public static void main(String[] args) {

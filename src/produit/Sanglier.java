@@ -5,7 +5,7 @@ import personnages.Gaulois;
 public class Sanglier extends Produit {
 
 	private String nom = "sanglier";
-	private int unite = 1000;
+	private int unite = 100;
 	private int poids;
 	private Gaulois chasseur;
 
@@ -25,7 +25,6 @@ public class Sanglier extends Produit {
 
 	@Override
 	public int calculerPrix(int prix) {
-		// TODO Auto-generated method stub
-		return 0;
+		return (prix/1000)*this.poids;
 	}
 }

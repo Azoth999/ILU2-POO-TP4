@@ -3,7 +3,7 @@ package villagegaulois;
 import personnages.Gaulois;
 import produit.*;
 
-public class Etal<P extends Produit> implements IEtal {
+public class Etal<P extends IProduit> implements IEtal {
 	private Gaulois vendeur;
 	private P[] tabProduits;
 	private int nbProduit;
@@ -13,6 +13,7 @@ public class Etal<P extends Produit> implements IEtal {
 	public void installerVendeur(Gaulois vendeur, P[] produit, int prix){
 		this.vendeur = vendeur;
 		this.nbProduit = produit.length;
+		this.tabProduits =(P[]) new IProduit[nbProduit];
 		for (int i = 0; i < nbProduit; i++) {
 			this.tabProduits[i]= produit[i];
 		}
