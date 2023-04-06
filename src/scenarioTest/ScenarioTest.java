@@ -37,6 +37,8 @@ public class ScenarioTest {
 		marche[1].installerVendeur(asterix, sangliersAsterix, 10);
 		marche[2].installerVendeur(ordralfabetix, poissons, 7);
 		
+		System.out.println(marche[0].acheterProduit(1));
+		
 	}
 	
 }

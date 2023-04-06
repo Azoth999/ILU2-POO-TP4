@@ -43,12 +43,12 @@ public class Etal<P extends IProduit> implements IEtal {
 	public double acheterProduit(int quantiteSouhaitee) {
 		double prixPaye = 0;
 		for (int i = nbProduit - 1; i > nbProduit - quantiteSouhaitee - 1 || i > 1; i--) {
-		prixPaye += tabProduits[i].calculerPrix(prix);
+			prixPaye += tabProduits[i].calculerPrix(this.prix);
 		}
 		if (nbProduit >= quantiteSouhaitee) {
-		nbProduit -= quantiteSouhaitee;
+			nbProduit -= quantiteSouhaitee;
 		} else {
-		nbProduit = 0;
+			nbProduit = 0;
 		}
 		return prixPaye;
 	}

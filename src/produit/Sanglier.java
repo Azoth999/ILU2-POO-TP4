@@ -25,6 +25,7 @@ public class Sanglier extends Produit {
 
 	@Override
 	public int calculerPrix(int prix) {
-		return (prix/1000)*this.poids;
+		System.out.println(prix*this.poids/1000);
+		return prix*this.poids/1000;
 	}
 }
