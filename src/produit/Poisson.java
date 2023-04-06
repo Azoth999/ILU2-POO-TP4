@@ -3,7 +3,7 @@ package produit;
 public class Poisson extends Produit {
 	
 	private String nom = "poisson";
-	private String unite = "kg";
+	private int unite = 1;
 	private String date;
 
 	public Poisson(String date) {
@@ -15,6 +15,12 @@ public class Poisson extends Produit {
 		StringBuilder texte = new StringBuilder();
 		texte.append(this.nom + " pêchés " + this.date);
 		return texte.toString();
+	}
+
+	@Override
+	public int calculerPrix(int prix) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }

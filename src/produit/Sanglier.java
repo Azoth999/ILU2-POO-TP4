@@ -5,7 +5,7 @@ import personnages.Gaulois;
 public class Sanglier extends Produit {
 
 	private String nom = "sanglier";
-	private String unite = "kg";
+	private int unite = 1000;
 	private int poids;
 	private Gaulois chasseur;
 
@@ -18,8 +18,14 @@ public class Sanglier extends Produit {
 	public String description() {
 		StringBuilder texte = new StringBuilder();
 		texte.append(this.nom + " de " + this.poids 
-				+ " " + unite + " chassé par " 
+				+ " kg chassé par " 
 				+ this.chasseur.getNom());
 		return texte.toString();
+	}
+
+	@Override
+	public int calculerPrix(int prix) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 }

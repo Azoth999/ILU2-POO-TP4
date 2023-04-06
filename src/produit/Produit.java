@@ -2,7 +2,7 @@ package produit;
 
 public abstract class Produit implements IProduit{
 	private String nom;
-	private String unite;
+	private int unite;
 		
 	public String getNom() {
 		return nom;
@@ -10,7 +10,5 @@ public abstract class Produit implements IProduit{
 	
 	public abstract String description();
 	
-	public int calculerPrix(int prix) {
-		
-	}
+	public abstract int calculerPrix(int prix);
 }
